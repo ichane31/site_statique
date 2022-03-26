@@ -536,7 +536,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #intro::before {
     content:'';
-  background: #dcdcdd;
+  /*background: #dcdcdd;*/
     position: absolute;
     bottom: 0;
     top: 0;
