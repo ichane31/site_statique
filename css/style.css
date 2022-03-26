@@ -15,6 +15,8 @@ body {
     color: #babdc5;
     font-family: Arial, Helvetica, sans-serif;
     font-style: bold;
+    width: 100%;
+    height: 100%;
 }
 
 a {
@@ -33,6 +35,7 @@ a:focus {
 p {
     padding: 0;
     margin: 0 0 30px 0;
+    text-align: justify;
 }
 
 h1,
@@ -49,7 +52,7 @@ h6 {
 }
 
 .main-page {
-    margin-top: 60px;
+    margin-top: 70px;
 }
 
 .wow {
@@ -167,17 +170,28 @@ h6 {
     z-index: 997;
 }
 
+@media (max-width: 991px) {
+    #header {
+        background: rgba(6, 12, 34, 0.98);
+        height: 70px;
+        padding: 15px 0;
+        transition: all 0.5s;
+    }
+}
+
 @media (max-width: 1199px) {
     #header .container {
         max-width: 100%;
     }
 }
 
+
+
 #header.header-scrolled,
 #header.header-fixed {
     background: rgba(10, 53, 13, 0.98);
     height: 70px;
-    padding: 30px 0;
+    padding: 15px 0;
     transition: all 0.5s;
 }
 
@@ -237,7 +251,7 @@ h6 {
 
 .nav-menu>li {
     float: left;
-    margin-left: 8px;
+
 }
 
 .nav-menu li:hover>ul,
@@ -279,7 +293,12 @@ h6 {
 
 #nav-menu-container {
     float: right;
-    margin-top: 0px;
+    margin: 0px;
+}
+@media (max-width: 991px) {
+    #nav-menu-container {
+        display: none;
+    }
 }
 
 
@@ -294,16 +313,21 @@ h6 {
     font-weight: 600;
     font-size: 14px;
     outline: none;
-    background-color: #a2ceac;
+    background-color: #c4cac5;
 }
 
 .nav-menu .menu-active a,
 .nav-menu a:hover {
-    color: rgb(170, 108, 108);
+    color: rgb(212, 182, 182);
 }
 
+@media (max-width: 1199px) {
+    .nav-menu a {
+        padding: 8px 4px;
+    }
+}
 .nav-menu>li {
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .nav-menu>li>a:before {
@@ -362,7 +386,7 @@ h6 {
 
 .nav-menu ul li a {
     padding: 10px;
-    color: #2c332e;
+    color: #132444;
     transition: 0.3s;
     display: block;
     font-size: 13px;
@@ -416,7 +440,7 @@ h6 {
     padding-top: 18px;
     bottom: 0;
     z-index: 998;
-    background: rgba(144, 152, 182, 0.9);
+    background: rgba(79, 87, 116, 0.9);
     left: -260px;
     width: 260px;
     overflow-y: auto;
@@ -477,7 +501,7 @@ h6 {
     top: 0;
     left: 0;
     position: fixed;
-    background: rgba(109, 120, 158, 0.8);
+    background: rgba(74, 86, 129, 0.8);
     display: none;
 }
 
@@ -512,6 +536,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #intro::before {
     content: "";
+    background: #9c9c9e;
     position: absolute;
     bottom: 0;
     top: 0;
@@ -552,7 +577,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     color: rgb(156, 154, 154);
     font-family: calibri body;
     font-size: 25px;
-    font-weight: 400;
+    font-weight: 250%;
     text-transform: uppercase;
     font-style: bold;
 }
@@ -561,10 +586,21 @@ body.mobile-nav-active #mobile-nav-toggle {
     color: #f82249;
 }
 
+@media (max-width: 900px) {
+    #intro h1 {
+        font-size: 12px;
+    }
+}
+
 #intro p {
     color: #dddbdb;
     font-weight: 500;
     font-size: 20px;
+}
+@media (max-width: 991px) {
+    #intro p {
+        font-size: 16px;
+    }
 }
 
 #intro .play-btn {
@@ -703,6 +739,12 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding: 10px 0 10px 0;
 }
 
+@media (min-width: 1024px) {
+    #about {
+        background-attachment: fixed;
+    }
+}
+
 #about:before {
     content: "";
     position: absolute;
@@ -718,24 +760,24 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-bottom: 10px;
     color: rgb(37, 39, 145);
     background-color: white;
-    margin-top: 5%;
+    
 }
 
 
-/*#about h3 {
+#about h3 {
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 10px;
     color: rgb(35, 110, 69);
-}*/
+}
 
 #about p {
-    font-size: 15px;
+    font-size: 18px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-bottom: 20px;
     color: rgb(2, 0, 0);
-    background-color: rgb(236, 233, 233);
+    background-color: #d6d6da;
     padding-left: 0%;
     padding-bottom: 10%;
 }
@@ -837,9 +879,14 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #speakers-details .details p {
-    color: #112363;
-    font-size: 15px;
+    color: #2b2b38;
+    font-size: 14px;
     margin-bottom: 10px;
+}
+.social p {
+    color: #111113;
+    font-size: 10px;
+    
 }
 
 
@@ -849,6 +896,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #schedule {
     padding: 80px 0px 60px 60px;
+    width: 100%;
 }
 
 #schedule .nav-tabs {
@@ -942,7 +990,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     color: white;
     border-radius: 20px;
     width: 130%;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 #schedule .schedule-item a::before {
@@ -951,7 +999,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #schedule .schedule-item p {
     font-style: bold;
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: black;
     margin-bottom: 0;
